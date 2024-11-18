@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{9d0e6508-3bc2-4e09-b277-8f9afa4e9a21}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="almtest_name" select="1" icon="1" preview="1">
+        <row name="result" id="almtest_timeoffid">
+          <cell name="almtest_name" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>1</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="almtest_timeoff">
+          <attribute name="almtest_timeoffid" />
+          <attribute name="almtest_name" />
+          <attribute name="createdon" />
+          <order attribute="almtest_name" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="TimeOff Advanced Find View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>
