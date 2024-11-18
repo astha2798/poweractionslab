@@ -14,7 +14,7 @@ jobs:
       #You can specify the solution name here
       solution_name: TestSolutionastha
       #Update your values here
-      BUILD_ENVIRONMENT_URL: 'fsidev.crm.dynamics.com'
+      BUILD_ENVIRONMENT_URL: 'https://fsidev.crm.dynamics.com/'
       PRODUCTION_ENVIRONMENT_URL: 'https://orga8e3d867.crm.dynamics.com/'
       CLIENT_ID: '3342104b-42e0-4fdd-89e3-a57447ccb464'
       TENANT_ID: 'c6bede60-7e66-4330-b740-fb81e7fca11f'
