@@ -7,7 +7,7 @@ on:
     inputs:
       # Change this value
       solution_name:
-        description: 'TestSolution-astha'
+        description: TestSolution-astha
         required: true
         default: ALMLab
        #Do Not change these values
@@ -25,9 +25,9 @@ on:
        default: solutions/
 env:
 #edit your values here
-  ENVIRONMENT_URL: 'https://admin.powerplatform.microsoft.com'
-  CLIENT_ID: '3342104b-42e0-4fdd-89e3-a57447ccb464'
-  TENANT_ID: 'c6bede60-7e66-4330-b740-fb81e7fca11f'
+  ENVIRONMENT_URL: https://admin.powerplatform.microsoft.com
+  CLIENT_ID: 3342104b-42e0-4fdd-89e3-a57447ccb464
+  TENANT_ID: c6bede60-7e66-4330-b740-fb81e7fca11f
 permissions:
   contents: write
 jobs:
