@@ -33,7 +33,7 @@ on:
         type: string
         required: true      
       PRODUCTION_ENVIRONMENT_URL: 
-        description: 'https://orga8e3d867.crm.dynamics.com/'
+        description: 'https://fsidev.crm.dynamics.com/'
         type: string
         required: true
       CLIENT_ID: 
