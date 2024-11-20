@@ -1,0 +1,11 @@
+<botcomponent schemaname="cr246_financialNewsCopilotDevRelease101.knowledge.PublicSiteSearchSource.3">
+  <componenttype>16</componenttype>
+  <description>This knowledge source searches information on the web found in https://www.msn.com/en-in/money website</description>
+  <iscustomizable>0</iscustomizable>
+  <name>https://www.msn.com/en-in/money</name>
+  <parentbotid>
+    <schemaname>cr246_financialNewsCopilotDevRelease101</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

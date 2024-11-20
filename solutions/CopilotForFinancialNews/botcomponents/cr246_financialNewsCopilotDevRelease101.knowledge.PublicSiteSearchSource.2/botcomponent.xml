@@ -1,0 +1,11 @@
+<botcomponent schemaname="cr246_financialNewsCopilotDevRelease101.knowledge.PublicSiteSearchSource.2">
+  <componenttype>16</componenttype>
+  <description>This knowledge source searches information on the web found in https://www.google.com/finance/ website</description>
+  <iscustomizable>0</iscustomizable>
+  <name>https://www.google.com/finance/</name>
+  <parentbotid>
+    <schemaname>cr246_financialNewsCopilotDevRelease101</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

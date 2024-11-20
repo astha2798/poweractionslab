@@ -1,0 +1,32 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnUnknownIntent
+  id: main
+  priority: -1
+  actions:
+    - kind: SearchAndSummarizeContent
+      id: search-content
+      userInput: =System.Activity.Text
+      variable: Topic.Answer
+      additionalInstructions: Format the response as Title ,summary of the news and references with citations
+      fileSearchDataSource:
+        searchFilesMode:
+          kind: DoNotSearchFiles
+
+      knowledgeSources:
+        kind: SearchSpecificKnowledgeSources
+        knowledgeSources:
+          - cr246_financialNewsCopilotDevRelease101.knowledge.PublicSiteSearchSource.3
+          - cr246_financialNewsCopilotDevRelease101.knowledge.PublicSiteSearchSource.1
+          - cr246_financialNewsCopilotDevRelease101.knowledge.PublicSiteSearchSource.2
+          - cr246_financialNewsCopilotDevRelease101.knowledge.PublicSiteSearchSource.0
+
+    - kind: ConditionGroup
+      id: has-answer-conditions
+      conditions:
+        - id: has-answer
+          condition: =!IsBlank(Topic.Answer)
+          actions:
+            - kind: EndDialog
+              id: end-topic
+              clearTopicQueue: true

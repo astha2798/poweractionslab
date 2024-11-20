@@ -1,0 +1,25 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnRedirect
+  id: main
+  actions:
+    - kind: SendActivity
+      id: 0fogU6
+      activity:
+        text:
+          - Please select one of the following options to learn more about  {Global.Organization}
+        quickReplies:
+          - kind: MessageBack
+            text: "=\"News summary on \" & Text(Global.Organization)"
+
+          - kind: MessageBack
+            text: =Text(Global.Organization) & " Stock performance"
+
+          - kind: MessageBack
+            text: "=\"Sentiment on \" & Text(Global.Organization)"
+
+          - kind: MessageBack
+            text: "=\"Topic mentions over a time series on \" & Text(Global.Organization)"
+
+          - kind: MessageBack
+            text: Anything else
