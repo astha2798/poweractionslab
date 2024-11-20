@@ -1,0 +1,33 @@
+kind: AdaptiveDialog
+startBehavior: UseLatestPublishedContentAndCancelOtherTopics
+beginDialog:
+  kind: OnSystemRedirect
+  id: main
+  actions:
+    - kind: SendActivity
+      id: sendMessage_OPsT1O
+      activity:
+        text:
+          - What can I help you with?
+        quickReplies:
+          - kind: MessageBack
+            text: News summary on a topic
+
+          - kind: MessageBack
+            text: Stock performance
+
+          - kind: MessageBack
+            text: Sentiment on a Topic
+
+          - kind: MessageBack
+            text: Topic mentions over time series
+
+          - kind: MessageBack
+            text: Anything else
+
+    - kind: ClearAllVariables
+      id: clearAllVariables_73bTFR
+      variables: ConversationScopedVariables
+
+    - kind: CancelAllDialogs
+      id: cancelAllDialogs_12Gt21

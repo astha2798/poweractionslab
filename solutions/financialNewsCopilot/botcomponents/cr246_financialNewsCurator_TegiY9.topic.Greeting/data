@@ -1,0 +1,41 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    displayName: Greeting
+    includeInOnSelectIntent: false
+    triggerQueries:
+      - Good afternoon
+      - Good morning
+      - Hello
+      - Hey
+      - Hi
+
+  actions:
+    - kind: SendActivity
+      id: sendMessage_abmysR
+      activity:
+        text:
+          - Hello, how can I help you today?
+        speak:
+          - Hello, <break strength="medium" /> how can I help?
+        quickReplies:
+          - kind: MessageBack
+            text: Stock performance
+
+          - kind: MessageBack
+            text: News summary on a topic
+
+          - kind: MessageBack
+            text: Topic mentions over time series
+
+          - kind: MessageBack
+            text: Sentiment on a topic
+
+    - kind: BeginDialog
+      id: qaeHPb
+      dialog: cr246_financialNewsCurator_TegiY9.topic.ConversationStart
+
+    - kind: CancelAllDialogs
+      id: cancelAllDialogs_01At22

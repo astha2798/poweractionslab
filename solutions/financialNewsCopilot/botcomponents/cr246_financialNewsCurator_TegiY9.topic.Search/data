@@ -1,0 +1,32 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnUnknownIntent
+  id: main
+  priority: -1
+  actions:
+    - kind: SearchAndSummarizeContent
+      id: search-content
+      userInput: =System.Activity.Text
+      variable: Topic.Answer
+      additionalInstructions: Format the response as Title ,summary of the news and references with citations
+      fileSearchDataSource:
+        searchFilesMode:
+          kind: DoNotSearchFiles
+
+      knowledgeSources:
+        kind: SearchSpecificKnowledgeSources
+        knowledgeSources:
+          - cr246_financialNewsCurator_TegiY9.knowledge.httpswwwmsncom_avOyftpr3rmwvuqgg9t5s
+          - cr246_financialNewsCurator_TegiY9.knowledge.httpswwwbloombergcom_37yVZAlug8_1pWR8XFsAF
+          - cr246_financialNewsCurator_TegiY9.knowledge.httpswwwgooglecomfinance_DrC2GdBd9ph9_0JVWoBlH
+          - cr246_financialNewsCurator_TegiY9.knowledge.httpswwwmsncomeninmoney__9t1iLEjGbcLyzofHuXft
+
+    - kind: ConditionGroup
+      id: has-answer-conditions
+      conditions:
+        - id: has-answer
+          condition: =!IsBlank(Topic.Answer)
+          actions:
+            - kind: EndDialog
+              id: end-topic
+              clearTopicQueue: true

@@ -1,0 +1,25 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnConversationStart
+  id: main
+  actions:
+    - kind: SendActivity
+      id: YGhcYp
+      activity:
+        text:
+          - Hello, I'm {System.Bot.Name}, a virtual assistant. Just so you are aware, I sometimes use AI to answer your questions.
+        quickReplies:
+          - kind: MessageBack
+            text: News summary on a topic
+
+          - kind: MessageBack
+            text: Stock performance
+
+          - kind: MessageBack
+            text: Sentiment on a Topic
+
+          - kind: MessageBack
+            text: Topic mentions over a time series
+
+          - kind: MessageBack
+            text: Anything else

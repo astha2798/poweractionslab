@@ -1,0 +1,11 @@
+<botcomponent schemaname="cr246_financialNewsCurator_TegiY9.knowledge.httpswwwbloombergcom_37yVZAlug8_1pWR8XFsAF">
+  <componenttype>16</componenttype>
+  <description>This knowledge source searches information on the web found in https://www.bloomberg.com website</description>
+  <iscustomizable>0</iscustomizable>
+  <name>https://www.bloomberg.com</name>
+  <parentbotid>
+    <schemaname>cr246_financialNewsCurator_TegiY9</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>
