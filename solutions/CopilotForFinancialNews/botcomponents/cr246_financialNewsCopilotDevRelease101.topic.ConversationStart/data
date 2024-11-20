@@ -1,0 +1,22 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnConversationStart
+  id: main
+  actions:
+    - kind: SendActivity
+      id: YGhcYp
+      activity: Hello, I'm {System.Bot.Name}, a virtual assistant. Just so you are aware, I sometimes use AI to answer your questions.
+
+    - kind: Question
+      id: question_kGkdcw
+      interruptionPolicy:
+        allowInterruption: true
+
+      repeatCount: 0
+      variable: init:Global.Organization
+      prompt: Please specify the organization you’re interested in
+      entity: OrganizationPrebuiltEntity
+
+    - kind: BeginDialog
+      id: 4uu13I
+      dialog: cr246_financialNewsCopilotDevRelease101.topic.TopicSelection

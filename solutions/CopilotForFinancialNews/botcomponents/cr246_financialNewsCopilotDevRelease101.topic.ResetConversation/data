@@ -1,0 +1,58 @@
+kind: AdaptiveDialog
+startBehavior: UseLatestPublishedContentAndCancelOtherTopics
+beginDialog:
+  kind: OnSystemRedirect
+  id: main
+  actions:
+    - kind: ClearAllVariables
+      id: Yuv2Sk
+
+    - kind: Question
+      id: question_9Sr1iW
+      interruptionPolicy:
+        allowInterruption: true
+
+      variable: init:Topic.ContinueConverstionFlag
+      prompt:
+        text:
+          - Would you like to continue the conversation?
+        quickReplies:
+          - kind: MessageBack
+            text: Yes
+
+          - kind: MessageBack
+            text: No
+
+      entity: StringPrebuiltEntity
+
+    - kind: ConditionGroup
+      id: conditionGroup_SxFHG0
+      conditions:
+        - id: conditionItem_VK4yFg
+          condition: =Topic.ContinueConverstionFlag = "Yes"
+          actions:
+            - kind: Question
+              id: CSBvVQ
+              interruptionPolicy:
+                allowInterruption: true
+
+              variable: init:Topic.orgName
+              prompt: "Please provide the organization to continue with:"
+              entity: OrganizationPrebuiltEntity
+
+            - kind: SetVariable
+              id: IcZlCv
+              variable: Global.Organization
+              value: =Topic.orgName
+
+            - kind: BeginDialog
+              id: K7MrHc
+              dialog: cr246_financialNewsCopilotDevRelease101.topic.TopicSelection
+
+      elseActions:
+        - kind: BeginDialog
+          id: nYO1uv
+          dialog: cr246_financialNewsCopilotDevRelease101.topic.EndofConversation
+
+    - kind: CancelAllDialogs
+      id: cancelAllDialogs_12Gt21
