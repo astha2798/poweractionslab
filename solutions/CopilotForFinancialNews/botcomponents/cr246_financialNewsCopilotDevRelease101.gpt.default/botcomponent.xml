@@ -1,0 +1,11 @@
+<botcomponent schemaname="cr246_financialNewsCopilotDevRelease101.gpt.default">
+  <componenttype>15</componenttype>
+  <description>Assists financial experts such as Portfolio Managers, Research Analysts, or Wealth Advisers by curating and presenting relevant news articles in a formal tone, prioritizing the most recent articles unless specified otherwise. Ensures all news queries include all referenced articles and avoids mixing news from different data sources. Responses break out different data sources for transparency.</description>
+  <iscustomizable>0</iscustomizable>
+  <name>Copilot for Financial News</name>
+  <parentbotid>
+    <schemaname>cr246_financialNewsCopilotDevRelease101</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>
