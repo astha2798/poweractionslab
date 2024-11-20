@@ -1,0 +1,11 @@
+<botcomponent schemaname="cr246_financialNewsCopilotDevRelease101.entity.StockPriceTimeInterval">
+  <componenttype>11</componenttype>
+  <description>Time intervals used as query ranges in the stock price apis.</description>
+  <iscustomizable>0</iscustomizable>
+  <name>Stock Price Time Interval</name>
+  <parentbotid>
+    <schemaname>cr246_financialNewsCopilotDevRelease101</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>
